@@ -14,7 +14,7 @@ namespace hiqdev\php\merchant\paxum;
 class Merchant extends \hiqdev\php\merchant\Merchant
 {
     protected static $_defaults = [
-        'name'        => 'paxum',
+        'system'      => 'paxum',
         'label'       => 'Paxum',
         'actionUrl'   => 'https://paxum.com/payment/phrame.php?action=displayProcessPaymentLogin',
         'confirmText' => 'OK',
