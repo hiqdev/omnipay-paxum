@@ -3,9 +3,9 @@
 $header = <<<EOF
 Paxum plugin for PHP merchant library
 
-@link      https://github.com/hiqdev/php-merchant-paxum
-@package   php-merchant-paxum
-@license   BSD-3-Clause
+@link      https://github.com/hiqdev/omnipay-paxum
+@package   omnipay-paxum
+@license   MIT
 @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
 EOF;
 

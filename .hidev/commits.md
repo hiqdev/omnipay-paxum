@@ -1,5 +1,5 @@
-hiqdev/php-merchant-paxum commits history
------------------------------------------
+hiqdev/omnipay-paxum commits history
+------------------------------------
 
 ## Under development
 

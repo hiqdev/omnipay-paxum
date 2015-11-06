@@ -1,19 +1,21 @@
 {
-    "name": "hiqdev/php-merchant-paxum",
+    "name": "hiqdev/omnipay-paxum",
     "type": "library",
     "description": "Paxum plugin for PHP merchant library",
     "keywords": [
         "php",
+        "omnipay",
         "paxum",
-        "merchant"
+        "merchant",
+        "payment"
     ],
-    "homepage": "https://github.com/hiqdev/php-merchant-paxum",
-    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/hiqdev/omnipay-paxum",
+    "license": "MIT",
     "support": {
         "email": "support@hiqdev.com",
-        "source": "https://github.com/hiqdev/php-merchant-paxum",
-        "issues": "https://github.com/hiqdev/php-merchant-paxum/issues",
-        "wiki": "https://github.com/hiqdev/php-merchant-paxum/wiki",
+        "source": "https://github.com/hiqdev/omnipay-paxum",
+        "issues": "https://github.com/hiqdev/omnipay-paxum/issues",
+        "wiki": "https://github.com/hiqdev/omnipay-paxum/wiki",
         "forum": "http://forum.hiqdev.com/"
     },
     "authors": [
@@ -43,11 +45,11 @@
         }
     ],
     "require": {
-        "hiqdev/php-merchant": "*"
+        "omnipay/common": "~2.3"
     },
     "autoload": {
         "psr-4": {
-            "hiqdev\\php\\merchant\\paxum\\": "src"
+            "Omnipay\\Paxum\\": "src"
         }
     }
 }

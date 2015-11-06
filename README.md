@@ -1,11 +1,15 @@
-Paxum plugin for PHP merchant library
-=====================================
+Omnipay: Paxum
+==============
 
-[Paxum](https://paupal.com/) plugin for [PHP merchant library](https://github.com/hiqdev/php-merchant).
+**Paxum plugin for PHP merchant library**
 
-[![Latest Stable Version](https://poser.pugx.org/hiqdev/php-merchant-paxum/v/stable)](//packagist.org/packages/hiqdev/php-merchant-paxum)
-[![Total Downloads](https://poser.pugx.org/hiqdev/php-merchant-paxum/downloads)](//packagist.org/packages/hiqdev/php-merchant-paxum)
-[![Dependency Status](https://www.versioneye.com/php/hiqdev:php-merchant-paxum/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:php-merchant-paxum/dev-master)
+[![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-paxum/v/stable)](//packagist.org/packages/hiqdev/omnipay-paxum)
+[![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-paxum/downloads)](//packagist.org/packages/hiqdev/omnipay-paxum)
+[![Dependency Status](https://www.versioneye.com/php/hiqdev:omnipay-paxum/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:omnipay-paxum/dev-master)
+
+[Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
+processing library for PHP 5.3+.
+This package implements [Paxum](https://paupal.com/) support for Omnipay.
 
 ## Installation
 
@@ -14,20 +18,41 @@ The preferred way to install this library is through [composer](http://getcompos
 Either run
 
 ```
-php composer.phar require "hiqdev/php-merchant-paxum"
+php composer.phar require "hiqdev/omnipay-paxum"
 ```
 
 or add
 
 ```json
-"hiqdev/php-merchant-paxum": "*"
+"hiqdev/omnipay-paxum": "*"
 ```
 
 to the require section of your composer.json.
 
+## Basic Usage
+
+The following gateway is provided by this package:
+
+* [Paxum](http://paxum.com/)
+
+For general usage instructions, please see the main [Omnipay](https://github.com/omnipay/omnipay) repository.
+
+## Support
+
+If you are having general issues with Omnipay, we suggest posting on
+[Stack Overflow](http://stackoverflow.com/). Be sure to add the
+[omnipay tag](http://stackoverflow.com/questions/tagged/omnipay) so it can be easily found.
+
+If you want to keep up to date with release anouncements, discuss ideas for the project,
+or ask more detailed questions, there is also a [mailing list](https://groups.google.com/forum/#!forum/omnipay) which
+you can subscribe to.
+
+If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/hiqdev/omnipay-paxum/issues),
+or better yet, fork the library and submit a pull request.
+
 ## License
 
-This project is released under the terms of the BSD-3-Clause [license](https://github.com/hiqdev/php-merchant-paxum/blob/master/LICENSE).
-Read more [here](http://choosealicense.com/licenses/bsd-3-clause).
+This project is released under the terms of the MIT [license](https://github.com/hiqdev/omnipay-paxum/blob/master/LICENSE).
+Read more [here](http://choosealicense.com/licenses/mit).
 
 Copyright © 2015, HiQDev (http://hiqdev.com/)

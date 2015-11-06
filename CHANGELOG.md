@@ -1,5 +1,5 @@
-hiqdev/php-merchant-paxum changelog
------------------------------------
+hiqdev/omnipay-paxum changelog
+------------------------------
 
 ## Under development
 
