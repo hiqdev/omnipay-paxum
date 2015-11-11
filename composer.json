@@ -49,8 +49,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Omnipay\\Paxum\\": "src",
-            "Omnipay\\paxum\\": "src"
+            "Omnipay\\Paxum\\": "src"
         }
     }
 }
