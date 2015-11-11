@@ -4,6 +4,9 @@ hiqdev/omnipay-paxum commits history
 ## Under development
 
 - Redone to 'omnipay-paxum'
+    - 7c58261 2015-11-11 - Omnipay/paxum namespace (sol@hiqdev.com)
+    - 7fe0a66 2015-11-11 + Omnipay\paxum namespace (sol@hiqdev.com)
+    - 793020d 2015-11-11 still redoing to omnipay (sol@hiqdev.com)
     - 329d306 2015-11-11 still redoing to omnipay (sol@hiqdev.com)
     - 8b0ea67 2015-11-06 started redoing to 'omnipay-paxum' (sol@hiqdev.com)
 - Added basics
