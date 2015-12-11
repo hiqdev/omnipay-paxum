@@ -3,8 +3,9 @@ Omnipay: Paxum
 
 **Paxum plugin for PHP merchant library**
 
-[![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-paxum/v/stable)](//packagist.org/packages/hiqdev/omnipay-paxum)
-[![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-paxum/downloads)](//packagist.org/packages/hiqdev/omnipay-paxum)
+[![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-paxum/v/stable)](https://packagist.org/packages/hiqdev/omnipay-paxum)
+[![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-paxum/downloads)](https://packagist.org/packages/hiqdev/omnipay-paxum)
+[![Build Status](https://img.shields.io/travis/hiqdev/omnipay-paxum.svg)](https://travis-ci.org/hiqdev/omnipay-paxum)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:omnipay-paxum/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:omnipay-paxum/dev-master)
 
 [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
@@ -17,7 +18,7 @@ The preferred way to install this library is through [composer](http://getcompos
 
 Either run
 
-```
+```sh
 php composer.phar require "hiqdev/omnipay-paxum"
 ```
 
@@ -52,7 +53,7 @@ or better yet, fork the library and submit a pull request.
 
 ## License
 
-This project is released under the terms of the MIT [license](https://github.com/hiqdev/omnipay-paxum/blob/master/LICENSE).
+This project is released under the terms of the MIT [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/mit).
 
 Copyright © 2015, HiQDev (http://hiqdev.com/)
