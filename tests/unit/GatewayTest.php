@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * Paxum plugin for PHP merchant library
+ *
+ * @link      https://github.com/hiqdev/omnipay-paxum
+ * @package   omnipay-paxum
+ * @license   MIT
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
+ */
+
 namespace Omnipay\Paxum;
 
 use Omnipay\Tests\GatewayTestCase;
@@ -35,9 +44,9 @@ class GatewayTest extends GatewayTestCase
 
     public function testCompletePurchase()
     {
-        $request = $this->gateway->completePurchase(array(
+        $request = $this->gateway->completePurchase([
             'transactionId' => $this->transactionId,
-        ));
+        ]);
 
         $this->assertSame($this->purse,         $request->getPurse());
         $this->assertSame($this->secret,        $request->getSecret());
@@ -47,12 +56,12 @@ class GatewayTest extends GatewayTestCase
 
     public function testPurchase()
     {
-        $request = $this->gateway->purchase(array(
+        $request = $this->gateway->purchase([
             'transactionId' => $this->transactionId,
             'description'   => $this->description,
             'currency'      => $this->currency,
             'amount'        => $this->amount,
-        ));
+        ]);
 
         $this->assertSame($this->transactionId, $request->getTransactionId());
         $this->assertSame($this->description,   $request->getDescription());

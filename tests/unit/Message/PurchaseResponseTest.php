@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * Paxum plugin for PHP merchant library
+ *
+ * @link      https://github.com/hiqdev/omnipay-paxum
+ * @package   omnipay-paxum
+ * @license   MIT
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
+ */
+
 namespace Omnipay\Paxum\Message;
 
 use Omnipay\Tests\TestCase;
@@ -24,7 +33,7 @@ class PurchaseResponseTest extends TestCase
         parent::setUp();
 
         $this->request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
-        $this->request->initialize(array(
+        $this->request->initialize([
             'purse'         => $this->purse,
             'secret'        => $this->secret,
             'returnUrl'     => $this->returnUrl,
@@ -35,7 +44,7 @@ class PurchaseResponseTest extends TestCase
             'amount'        => $this->amount,
             'currency'      => $this->currency,
             'testMode'      => $this->testMode,
-        ));
+        ]);
     }
 
     public function testSuccess()
@@ -47,7 +56,7 @@ class PurchaseResponseTest extends TestCase
         $this->assertNull($response->getCode());
         $this->assertNull($response->getMessage());
         $this->assertSame('POST', $response->getRedirectMethod());
-        $this->assertSame(array(
+        $this->assertSame([
             'business_email' => $this->purse,
             'amount'         => $this->amount,
             'currency'       => $this->currency,
@@ -59,6 +68,6 @@ class PurchaseResponseTest extends TestCase
             'item_id'        => $this->transactionId,
             'sandbox'        => 'ON',
             'return'         => '00',
-        ), $response->getRedirectData());
+        ], $response->getRedirectData());
     }
 }

@@ -1,4 +1,14 @@
 <?php
+
+/*
+ * Paxum plugin for PHP merchant library
+ *
+ * @link      https://github.com/hiqdev/omnipay-paxum
+ * @package   omnipay-paxum
+ * @license   MIT
+ * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
+ */
+
 namespace Omnipay\Paxum\Message;
 
 use Omnipay\Tests\TestCase;
@@ -23,7 +33,7 @@ class PurchaseRequestTest extends TestCase
         parent::setUp();
 
         $this->request = new PurchaseRequest($this->getHttpClient(), $this->getHttpRequest());
-        $this->request->initialize(array(
+        $this->request->initialize([
             'purse'         => $this->purse,
             'secret'        => $this->secret,
             'returnUrl'     => $this->returnUrl,
@@ -34,7 +44,7 @@ class PurchaseRequestTest extends TestCase
             'amount'        => $this->amount,
             'currency'      => $this->currency,
             'testMode'      => $this->testMode,
-        ));
+        ]);
     }
 
     public function testGetData()

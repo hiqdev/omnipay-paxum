@@ -123,7 +123,7 @@ class CompletePurchaseResponse extends AbstractResponse
         // raw POST request
         $raw = file_get_contents('php://input');
         // removing trailing '&key=...'
-        $fields = substr($raw, 0, strpos($raw, "&key="));
+        $fields = substr($raw, 0, strpos($raw, '&key='));
 
         return md5($fields . $this->request->getSecret());
     }

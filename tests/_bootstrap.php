@@ -1,11 +1,11 @@
 <?php
 
 /*
- * Yii2 extension for payment processing with Omnipay, Payum and more later
+ * Paxum plugin for PHP merchant library
  *
- * @link      https://github.com/hiqdev/yii2-merchant
- * @package   yii2-merchant
- * @license   BSD-3-Clause
+ * @link      https://github.com/hiqdev/omnipay-paxum
+ * @package   omnipay-paxum
+ * @license   MIT
  * @copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
  */
 
