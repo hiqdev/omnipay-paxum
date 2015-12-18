@@ -21,17 +21,26 @@ class PurchaseRequest extends AbstractRequest
             'returnUrl', 'cancelUrl', 'notifyUrl'
         );
 
-        return [
-            'item_name'      => $this->getDescription(),
+        $res = [
             'business_email' => $this->getPurse(),
             'amount'         => $this->getAmount(),
             'currency'       => $this->getCurrency(),
+            'item_name'      => $this->getDescription(),
             'finish_url'     => $this->getReturnUrl(),
             'cancel_url'     => $this->getCancelUrl(),
-            'variables'      => $this->getVariables(),
+            'variables'      => 'notify_url=' . $this->getNotifyUrl(),
             'button_type_id' => 1, /// Pay Now button
-            //'sandbox'         => 'ON',
         ];
+
+        if ($this->getTransactionId()) {
+            $res['item_id'] = $this->getTransactionId();
+        }
+        if ($this->getTestMode()) {
+            $res['sandbox'] = 'ON';
+            $res['return']  = '00';
+        }
+
+        return $res;
     }
 
     public function sendData($data)

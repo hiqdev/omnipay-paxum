@@ -26,27 +26,22 @@ class Gateway extends AbstractGateway
         return 'Paxum';
     }
 
-    public function getAssetDir()
-    {
-        return dirname(__DIR__) . '/assets';
-    }
-
     /**
      * {@inheritdoc}
      */
     public function getDefaultParameters()
     {
         return [
-            'purse'         => '',
-            'secretKey'     => '',
-            'testMode'      => false,
+            'purse'     => '',
+            'secret'    => '',
+            'testMode'  => false,
         ];
     }
 
     /**
-     * Get the unified purse.
+     * Get the merchant purse.
      *
-     * @return string merchant purse
+     * @return string merchant purse - email associated with the merchant account.
      */
     public function getPurse()
     {
@@ -54,10 +49,9 @@ class Gateway extends AbstractGateway
     }
 
     /**
-     * Set the unified purse.
+     * Set the merchant purse.
      *
-     * @param string $purse merchant purse
-     *
+     * @param string $value merchant purse - email associated with the merchant account.
      * @return self
      */
     public function setPurse($value)
@@ -66,25 +60,24 @@ class Gateway extends AbstractGateway
     }
 
     /**
-     * Get the unified secret key.
+     * Get the merchant secret.
      *
-     * @return string secret key
+     * @return string merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services.
      */
-    public function getSecretKey()
+    public function getSecret()
     {
-        return $this->getParameter('secretKey');
+        return $this->getParameter('secret');
     }
 
     /**
-     * Set the unified secret key.
+     * Set the merchant secret.
      *
-     * @param string $value secret key
-     *
+     * @param string $value merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services.
      * @return self
      */
-    public function setSecretKey($value)
+    public function setSecret($value)
     {
-        return $this->setParameter('secretKey', $value);
+        return $this->setParameter('secret', $value);
     }
 
     /**

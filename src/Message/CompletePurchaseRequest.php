@@ -23,7 +23,7 @@ class CompletePurchaseRequest extends AbstractRequest
      */
     public function getData()
     {
-        $this->validate('purse');
+        $this->validate('secret');
 
         return $this->httpRequest->request->all();
     }
@@ -32,7 +32,6 @@ class CompletePurchaseRequest extends AbstractRequest
      * Send the request with specified data.
      *
      * @param mixed $data The data to send
-     *
      * @return CompletePurchaseResponse
      */
     public function sendData($data)

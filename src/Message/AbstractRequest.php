@@ -19,9 +19,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     protected $zeroAmountAllowed = false;
 
     /**
-     * Get the purse.
+     * Get the merchant purse.
      *
-     * @return string purse
+     * @return string merchant purse - email associated with the merchant account.
      */
     public function getPurse()
     {
@@ -31,8 +31,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     /**
      * Set the purse.
      *
-     * @param string $purse purse
-     *
+     * @param string $value merchant purse - email associated with the merchant account.
      * @return self
      */
     public function setPurse($value)
@@ -41,24 +40,23 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
-     * Get the secret key.
+     * Get the merchant secret.
      *
-     * @return string secret key
+     * @return string merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services.
      */
-    public function getPassword()
+    public function getSecret()
     {
-        return $this->getParameter('secretKey');
+        return $this->getParameter('secret');
     }
 
     /**
-     * Set the secret key.
+     * Set the merchant secret.
      *
-     * @param string $key secret key
-     *
+     * @param string $value merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services.
      * @return self
      */
-    public function setPassword($value)
+    public function setSecret($value)
     {
-        return $this->setParameter('secretKey', $value);
+        return $this->setParameter('secret', $value);
     }
 }
