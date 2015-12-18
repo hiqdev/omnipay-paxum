@@ -3,6 +3,7 @@ hiqdev/omnipay-paxum commits history
 
 ## Under development
 
+    - b49d4c1 2015-12-18 diff fixes (sol@hiqdev.com)
 - Redone to `omnipay-paxum`
     - a0e2407 2015-12-11 removed assets, now in `payment-icons` (sol@hiqdev.com)
     - 7c58261 2015-11-11 - Omnipay/paxum namespace (sol@hiqdev.com)

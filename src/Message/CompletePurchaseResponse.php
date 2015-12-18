@@ -84,6 +84,16 @@ class CompletePurchaseResponse extends AbstractResponse
     }
 
     /**
+     * Get test mode.
+     *
+     * @return string
+     */
+    public function getTestMode()
+    {
+        return $this->data['sandbox'] === 'ON';
+    }
+
+    /**
      * Get payer info - name, username and id.
      *
      * @return string
