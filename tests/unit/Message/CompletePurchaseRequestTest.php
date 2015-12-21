@@ -35,7 +35,7 @@ class CompletePurchaseRequestTest extends TestCase
             'key'            => $this->key,
             'business_email' => $this->purse,
             'description'    => $this->description,
-            'item_id'        => $this->transcationId,
+            'item_id'        => $this->transactionId,
             'amount'         => $this->amount,
             'currency'       => $this->currency,
             'sandbox'        => 'ON',
@@ -56,7 +56,7 @@ class CompletePurchaseRequestTest extends TestCase
         $this->assertSame($this->key,           $data['key']);
         $this->assertSame($this->purse,         $data['business_email']);
         $this->assertSame($this->description,   $data['description']);
-        $this->assertSame($this->transcationId, $data['item_id']);
+        $this->assertSame($this->transactionId, $data['item_id']);
         $this->assertSame($this->amount,        $data['amount']);
         $this->assertSame($this->currency,      $data['currency']);
     }
