@@ -4,6 +4,7 @@ hiqdev/omnipay-paxum commits history
 ## Under development
 
 - Redone to `omnipay-paxum`
+    - 402263a 2015-12-21 first working (sol@hiqdev.com)
     - 1f2e9e0 2015-12-18 php-cs-fixed (sol@hiqdev.com)
     - d02294f 2015-12-18 added tests (sol@hiqdev.com)
     - b49d4c1 2015-12-18 diff fixes (sol@hiqdev.com)
