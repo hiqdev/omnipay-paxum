@@ -29,6 +29,10 @@ class CompletePurchaseResponse extends AbstractResponse
         $this->request = $request;
         $this->data    = $data;
 
+        if ($this->getTransactionStatus() !== 'done') {
+            throw new InvalidResponseException('Transaction not done');
+        }
+
         if ($this->getHash() !== $this->calculateHash()) {
             throw new InvalidResponseException('Invalid hash');
         }
@@ -64,6 +68,11 @@ class CompletePurchaseResponse extends AbstractResponse
         return $this->data['transaction_id'];
     }
 
+    public function getTransactionStatus()
+    {
+        return $this->data['transaction_status'];
+    }
+
     /**
      * {@inheritdoc}
      * @return string
@@ -80,7 +89,7 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getTime()
     {
-        return Helper::isotime($this->getVar('transaction_date') . ' EST');
+        return Helper::isotime($this->data['transaction_date'] . ' EST');
     }
 
     /**
@@ -100,7 +109,7 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getPayer()
     {
-        return $this->getVar('buyer_name') . '/' . $this->getVar('buyer_username') . '/' . $this->getVar('buyer_id');
+        return $this->data['buyer_name'] . '/' . $this->data['buyer_username'] . '/' . $this->data['buyer_id'];
     }
 
     /**
@@ -124,7 +133,33 @@ class CompletePurchaseResponse extends AbstractResponse
         $raw = file_get_contents('php://input');
         // removing trailing '&key=...'
         $fields = substr($raw, 0, strpos($raw, '&key='));
+        // this is the documentation way
+        $supposed_hash = md5($fields . $this->request->getSecret());
 
-        return md5($fields . $this->request->getSecret());
+        // this is how they actually get it
+        $kvs = '';
+        foreach ($this->data as $k=>$v) {
+            if ($k !== 'key' && $k !== 'username') {
+                $kvs  .= ($kvs ? '&' : '') . "$k=$v";
+            }
+        }
+        $hash = md5($kvs);
+
+        /* Testing facility
+        throw new \Exception(
+            var_export([
+                'key'    => $this->getHash(),
+                'fields' => $fields,
+                'secret' => $this->request->getSecret(),
+                'hash'   => $hash,
+                'h2'     => md5($fields),
+                'h3'     => md5($fields . $this->request->getSecret()),
+                'kvs'    => $kvs,
+                'kh3'    => md5($kvs),
+                'kh4'    => md5($kvs . $this->request->getSecret()),
+            ], true)
+        );*/
+
+        return $hash;
     }
 }
