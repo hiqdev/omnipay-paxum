@@ -99,7 +99,7 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getTestMode()
     {
-        return $this->data['sandbox'] === 'ON';
+        return $this->data['test'] === '1';
     }
 
     /**
