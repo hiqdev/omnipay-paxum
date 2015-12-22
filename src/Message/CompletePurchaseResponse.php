@@ -138,7 +138,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
         // this is how they actually get it
         $kvs = '';
-        foreach ($this->data as $k=>$v) {
+        foreach ($this->data as $k => $v) {
             if ($k !== 'key' && $k !== 'username') {
                 $kvs  .= ($kvs ? '&' : '') . "$k=$v";
             }

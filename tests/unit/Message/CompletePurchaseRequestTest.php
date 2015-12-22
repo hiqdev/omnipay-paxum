@@ -39,7 +39,7 @@ class CompletePurchaseRequestTest extends TestCase
             'transaction_amount'        => $this->amount,
             'transaction_status'        => $this->status,
             'transaction_currency'      => $this->currency,
-            'test'                      => (int)$this->testMode,
+            'test'                      => (int) $this->testMode,
             'key'                       => $this->key,
         ]);
 
