@@ -6,10 +6,13 @@ Omnipay: Paxum
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-paxum/v/stable)](https://packagist.org/packages/hiqdev/omnipay-paxum)
 [![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-paxum/downloads)](https://packagist.org/packages/hiqdev/omnipay-paxum)
 [![Build Status](https://img.shields.io/travis/hiqdev/omnipay-paxum.svg)](https://travis-ci.org/hiqdev/omnipay-paxum)
+[![Code Coverage](https://scrutinizer-ci.com/g/hiqdev/omnipay-paxum/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/omnipay-paxum/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiqdev/omnipay-paxum/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/omnipay-paxum/?branch=master)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:omnipay-paxum/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:omnipay-paxum/dev-master)
 
 [Omnipay](https://github.com/omnipay/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+.
+
 This package implements [Paxum](https://paupal.com/) support for Omnipay.
 
 ## Installation
