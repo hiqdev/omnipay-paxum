@@ -1,9 +1,9 @@
 package:
+    type:           library
     name:           omnipay-paxum
     namespace:      Omnipay\Paxum
-    headline:       Omnipay: Paxum
+    headline:       'Omnipay: Paxum'
     title:          Paxum plugin for PHP merchant library
-    type:           library
     license:        MIT
     keywords:       php, omnipay, paxum, merchant, payment
     description:    |
@@ -11,9 +11,6 @@ package:
         processing library for PHP 5.3+.
 
         This package implements [Paxum](https://paupal.com/) support for Omnipay.
-
-phpunit:
-    colors:
 
 require:
     hiqdev/hidev-php:    "*"

@@ -6,7 +6,7 @@ Paxum plugin for PHP merchant library
 @link      https://github.com/hiqdev/omnipay-paxum
 @package   omnipay-paxum
 @license   MIT
-@copyright Copyright (c) 2015, HiQDev (http://hiqdev.com/)
+@copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
 EOF;
 
 Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);
