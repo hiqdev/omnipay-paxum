@@ -48,33 +48,33 @@ class CompletePurchaseResponseTest extends TestCase
     public function testNotDoneException()
     {
         $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Transaction not done');
-        new CompletePurchaseResponse($this->request, array(
+        new CompletePurchaseResponse($this->request, [
             'description'           => $this->description,
-        ));
+        ]);
     }
 
     public function testSignHashException()
     {
         $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Invalid hash');
-        new CompletePurchaseResponse($this->request, array(
+        new CompletePurchaseResponse($this->request, [
             'description'           => $this->description,
             'transaction_status'    => $this->status,
-        ));
+        ]);
     }
 
     public function testInvalidTestModeException()
     {
         $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Invalid test mode');
-        new CompletePurchaseResponse($this->request, array(
+        new CompletePurchaseResponse($this->request, [
             'description'           => $this->description,
             'transaction_status'    => $this->status,
             'key'                   => '9f72e6500b839e1198f6dadca7a100fa',
-        ));
+        ]);
     }
 
     public function testSuccess()
     {
-        $response = new CompletePurchaseResponse($this->request, array(
+        $response = new CompletePurchaseResponse($this->request, [
             'key'                   => $this->hash,
             'test'                  => '1',
             'description'           => $this->description,
@@ -83,18 +83,17 @@ class CompletePurchaseResponseTest extends TestCase
             'transaction_status'    => $this->status,
             'transaction_amount'    => $this->amount,
             'transaction_date'      => $this->time,
-        ));
+        ]);
 
         $this->assertTrue($response->isSuccessful());
         $this->assertTrue($response->getTestMode());
         $this->assertNull($response->getMessage());
         $this->assertNull($response->getCode());
-        $this->assertSame($this->transactionId,             $response->getTransactionId());
-        $this->assertSame($this->transactionReference,      $response->getTransactionReference());
-        $this->assertSame($this->amount,                    $response->getAmount());
-        $this->assertSame($this->payer,                     $response->getPayer());
-        $this->assertSame($this->hash,                      $response->getHash());
-        $this->assertSame(strtotime($this->time)+5*3600,    strtotime($response->getTime()));
+        $this->assertSame($this->transactionId,         $response->getTransactionId());
+        $this->assertSame($this->transactionReference,  $response->getTransactionReference());
+        $this->assertSame($this->amount,                $response->getAmount());
+        $this->assertSame($this->payer,                 $response->getPayer());
+        $this->assertSame($this->hash,                  $response->getHash());
+        $this->assertSame(strtotime($this->time),       strtotime($response->getTime()) - 5 * 3600);
     }
-
 }
