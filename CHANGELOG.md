@@ -3,6 +3,7 @@ hiqdev/omnipay-paxum changelog
 
 ## Under development
 
+- Added 100% test coverage
 - Redone to `omnipay-paxum`
 - Added basics
 

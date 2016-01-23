@@ -3,7 +3,11 @@ hiqdev/omnipay-paxum commits history
 
 ## Under development
 
+- Added 100% test coverage
+    - bfb66f4 2016-01-23 phpcsfixed (sol@hiqdev.com)
+    - b4e93bd 2016-01-23 done 100% test coverage (sol@hiqdev.com)
 - Redone to `omnipay-paxum`
+    - 56bbd13 2016-01-23 removed Merchant.php (sol@hiqdev.com)
     - 74f017b 2016-01-22 rehideved (sol@hiqdev.com)
     - ccea654 2015-12-24 fixed build (sol@hiqdev.com)
     - 48209aa 2015-12-22 fixed CompletePurchaseRequestTest (sol@hiqdev.com)
