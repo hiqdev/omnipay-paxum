@@ -34,6 +34,7 @@ class CompletePurchaseResponse extends AbstractResponse
         }
 
         if ($this->getHash() !== $this->calculateHash()) {
+            # echo "hashes: '" . $this->getHash() . "' - '" . $this->calculateHash() . "'\n";
             throw new InvalidResponseException('Invalid hash');
         }
 
@@ -89,7 +90,7 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getTime()
     {
-        return Helper::isotime($this->data['transaction_date'] . ' EST');
+        return date('c', strtotime($this->data['transaction_date'] . ' EST'));
     }
 
     /**
