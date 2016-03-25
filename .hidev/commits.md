@@ -3,6 +3,10 @@ hiqdev/omnipay-paxum commits history
 
 ## Under development
 
+- BROKEN hash check
+    - d435645 2016-03-25 rehideved (sol@hiqdev.com)
+    - 9c8e0a5 2016-03-25 SKIPPED testInvalidHashException (sol@hiqdev.com)
+    - 154eaa4 2016-03-25 BROKEN hash check (sol@hiqdev.com)
 - Added 100% test coverage
     - bfb66f4 2016-01-23 phpcsfixed (sol@hiqdev.com)
     - b4e93bd 2016-01-23 done 100% test coverage (sol@hiqdev.com)
