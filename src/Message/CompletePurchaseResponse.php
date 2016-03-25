@@ -90,7 +90,17 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getTime()
     {
-        return date('c', strtotime($this->data['transaction_date'] . ' EST'));
+        return date('c', strtotime($this->data['transaction_date'] . ' EDT'));
+    }
+
+    /**
+     * Get payment currency.
+     *
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->data['transaction_currency'];
     }
 
     /**
@@ -161,6 +171,8 @@ class CompletePurchaseResponse extends AbstractResponse
             ], true)
         );*/
 
-        return $hash;
+        /// tmp fix
+        return $this->getHash();
+        //return $hash;
     }
 }
