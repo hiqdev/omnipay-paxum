@@ -140,12 +140,11 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function calculateHash()
     {
-        // raw POST request
-        $raw = file_get_contents('php://input');
-        // removing trailing '&key=...'
-        $fields = substr($raw, 0, strpos($raw, '&key='));
         // this is the documentation way
-        $supposed_hash = md5($fields . $this->request->getSecret());
+        $raw = file_get_contents('php://input');
+        $fields = substr($raw, 0, strpos($raw, '&key='));
+        $secret = $this->request->getSecret();
+        $supposed_hash = md5($fields . $secret);
 
         // this is how they actually get it
         $kvs = '';
@@ -157,19 +156,17 @@ class CompletePurchaseResponse extends AbstractResponse
         $hash = md5($kvs);
 
         /* Testing facility
-        throw new \Exception(
-            var_export([
-                'key'    => $this->getHash(),
-                'fields' => $fields,
-                'secret' => $this->request->getSecret(),
-                'hash'   => $hash,
-                'h2'     => md5($fields),
-                'h3'     => md5($fields . $this->request->getSecret()),
-                'kvs'    => $kvs,
-                'kh3'    => md5($kvs),
-                'kh4'    => md5($kvs . $this->request->getSecret()),
-            ], true)
-        );*/
+        dlog([
+            'key'    => $this->getHash(),
+            'fields' => $fields,
+            'kvs'    => $kvs,
+            'secret' => $secret,
+            'hash'   => $hash,
+            'h2'     => md5($fields),
+            'h3'     => md5($fields . $secret),
+            'kh3'    => md5($kvs),
+            'kh4'    => md5($kvs . $secret),
+        ]); */
 
         /// tmp fix
         return $this->getHash();
