@@ -1,12 +1,11 @@
 <?php
-
-/*
- * Paxum plugin for PHP merchant library
+/**
+ * Paxum plugin for PHP merchant library.
  *
  * @link      https://github.com/hiqdev/omnipay-paxum
  * @package   omnipay-paxum
  * @license   MIT
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace Omnipay\Paxum\Message;
@@ -34,7 +33,7 @@ class CompletePurchaseResponse extends AbstractResponse
         }
 
         if ($this->getHash() !== $this->calculateHash()) {
-            # echo "hashes: '" . $this->getHash() . "' - '" . $this->calculateHash() . "'\n";
+            // echo "hashes: '" . $this->getHash() . "' - '" . $this->calculateHash() . "'\n";
             throw new InvalidResponseException('Invalid hash');
         }
 
@@ -150,7 +149,7 @@ class CompletePurchaseResponse extends AbstractResponse
         $kvs = '';
         foreach ($this->data as $k => $v) {
             if ($k !== 'key' && $k !== 'username') {
-                $kvs  .= ($kvs ? '&' : '') . "$k=$v";
+                $kvs .= ($kvs ? '&' : '') . "$k=$v";
             }
         }
         $hash = md5($kvs);

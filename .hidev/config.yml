@@ -11,7 +11,3 @@ package:
         processing library for PHP 5.3+.
 
         This package implements [Paxum](https://paupal.com/) support for Omnipay.
-
-require:
-    hiqdev/hidev-php:    "*"
-    hiqdev/hidev-vendor: "*"

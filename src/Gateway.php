@@ -1,12 +1,11 @@
 <?php
-
-/*
- * Paxum plugin for PHP merchant library
+/**
+ * Paxum plugin for PHP merchant library.
  *
  * @link      https://github.com/hiqdev/omnipay-paxum
  * @package   omnipay-paxum
  * @license   MIT
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace Omnipay\Paxum;
@@ -41,7 +40,7 @@ class Gateway extends AbstractGateway
     /**
      * Get the merchant purse.
      *
-     * @return string merchant purse - email associated with the merchant account.
+     * @return string merchant purse - email associated with the merchant account
      */
     public function getPurse()
     {
@@ -51,7 +50,7 @@ class Gateway extends AbstractGateway
     /**
      * Set the merchant purse.
      *
-     * @param string $value merchant purse - email associated with the merchant account.
+     * @param string $value merchant purse - email associated with the merchant account
      * @return self
      */
     public function setPurse($value)
@@ -62,7 +61,7 @@ class Gateway extends AbstractGateway
     /**
      * Get the merchant secret.
      *
-     * @return string merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services.
+     * @return string merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services
      */
     public function getSecret()
     {
@@ -72,7 +71,7 @@ class Gateway extends AbstractGateway
     /**
      * Set the merchant secret.
      *
-     * @param string $value merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services.
+     * @param string $value merchant secret - IPN shared secret which merchant gets by email from Paxum Merchant Services
      * @return self
      */
     public function setSecret($value)

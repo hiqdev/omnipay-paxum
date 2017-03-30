@@ -1,12 +1,11 @@
 <?php
-
-/*
- * Paxum plugin for PHP merchant library
+/**
+ * Paxum plugin for PHP merchant library.
  *
  * @link      https://github.com/hiqdev/omnipay-paxum
  * @package   omnipay-paxum
  * @license   MIT
- * @copyright Copyright (c) 2015-2016, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2015-2017, HiQDev (http://hiqdev.com/)
  */
 
 namespace Omnipay\Paxum;
