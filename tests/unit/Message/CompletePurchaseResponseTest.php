@@ -96,6 +96,6 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($this->payer,                 $response->getPayer());
         $this->assertSame($this->hash,                  $response->getHash());
         $this->assertSame($this->currency,              $response->getCurrency());
-        $this->assertSame(strtotime($this->time),       strtotime($response->getTime()) - 4 * 3600);
+        $this->assertSame(strtotime($this->time),       strtotime($response->getTime()) - 6 * 3600);
     }
 }

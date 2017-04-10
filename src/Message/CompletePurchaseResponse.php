@@ -89,7 +89,10 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getTime()
     {
-        return date('c', strtotime($this->data['transaction_date'] . ' EDT'));
+        $time = new \DateTime($this->data['transaction_date'], new \DateTimeZone('EST'));
+        $time->setTimezone(new \DateTimeZone('UTC'));
+
+        return $time->format('c');
     }
 
     /**
