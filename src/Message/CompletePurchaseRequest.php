@@ -1,6 +1,6 @@
 <?php
 /**
- * Paxum plugin for PHP merchant library.
+ * Paxum driver for PHP merchant library
  *
  * @link      https://github.com/hiqdev/omnipay-paxum
  * @package   omnipay-paxum

@@ -1,7 +1,7 @@
 {
     "name": "hiqdev/omnipay-paxum",
     "type": "library",
-    "description": "Paxum plugin for PHP merchant library",
+    "description": "Paxum driver for PHP merchant library",
     "keywords": [
         "php",
         "omnipay",

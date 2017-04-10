@@ -1,7 +1,7 @@
 package:
     type:           library
     name:           omnipay-paxum
-    title:          Paxum plugin for PHP merchant library
+    title:          Paxum driver for PHP merchant library
     license:        MIT
     headline:       'Omnipay: Paxum'
     keywords:       php, omnipay, paxum, merchant, payment

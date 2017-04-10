@@ -1,6 +1,6 @@
 # Omnipay: Paxum
 
-**Paxum plugin for PHP merchant library**
+**Paxum driver for PHP merchant library**
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/omnipay-paxum/v/stable)](https://packagist.org/packages/hiqdev/omnipay-paxum)
 [![Total Downloads](https://poser.pugx.org/hiqdev/omnipay-paxum/downloads)](https://packagist.org/packages/hiqdev/omnipay-paxum)
