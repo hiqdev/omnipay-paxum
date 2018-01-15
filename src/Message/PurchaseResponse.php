@@ -18,7 +18,7 @@ use Omnipay\Common\Message\RedirectResponseInterface;
  */
 class PurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {
-    protected $_redirect = 'https://paxum.com/payment/phrame.php?action=displayProcessPaymentLogin';
+    protected $_redirect = 'https://www.paxum.com/payment/phrame.php?action=displayProcessPaymentLogin';
 
     public function isSuccessful()
     {
