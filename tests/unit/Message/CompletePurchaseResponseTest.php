@@ -11,6 +11,7 @@
 namespace Omnipay\Paxum\Message;
 
 use Omnipay\Tests\TestCase;
+use Omnipay\Common\Exception\InvalidResponseException;
 
 class CompletePurchaseResponseTest extends TestCase
 {
@@ -43,7 +44,8 @@ class CompletePurchaseResponseTest extends TestCase
 
     public function testNotDoneException()
     {
-        $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Transaction not done');
+        $this->expectException(InvalidResponseException::class);
+        $this->expectExceptionMessage('Transaction not done');
         new CompletePurchaseResponse($this->request, [
             'description'           => $this->description,
         ]);
@@ -53,7 +55,8 @@ class CompletePurchaseResponseTest extends TestCase
     {
         $this->markTestSkipped('This test is disabled because of broken hash checking.');
 
-        $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Invalid hash');
+        $this->expectException(InvalidResponseException::class);
+        $this->expectExceptionMessage('Invalid hash');
         new CompletePurchaseResponse($this->request, [
             'test'                  => '1',
             'description'           => $this->description,
@@ -64,7 +67,8 @@ class CompletePurchaseResponseTest extends TestCase
 
     public function testInvalidTestModeException()
     {
-        $this->setExpectedException('Omnipay\Common\Exception\InvalidResponseException', 'Invalid test mode');
+        $this->expectException(InvalidResponseException::class);
+        $this->expectExceptionMessage('Invalid test mode');
         new CompletePurchaseResponse($this->request, [
             'description'           => $this->description,
             'transaction_status'    => $this->status,
@@ -96,6 +100,12 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertSame($this->payer,                 $response->getPayer());
         $this->assertSame($this->hash,                  $response->getHash());
         $this->assertSame($this->currency,              $response->getCurrency());
-        $this->assertSame(strtotime($this->time),       strtotime($response->getTime()) - 6 * 3600);
+
+        $timeInUTC = new \DateTime($response->getTime(), new \DateTimeZone('UTC'));
+        $timeInUTC->setTimezone(new \DateTimeZone('EST'));
+
+        $timeInEST = new \DateTime($this->time, new \DateTimeZone('EST'));
+
+        $this->assertSame($timeInEST->format(DATE_ATOM),       $timeInUTC->format(DATE_ATOM));
     }
 }

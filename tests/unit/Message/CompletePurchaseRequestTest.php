@@ -66,6 +66,6 @@ class CompletePurchaseRequestTest extends TestCase
     {
         $data = $this->request->getData();
         $response = $this->request->sendData($data);
-        $this->assertSame('Omnipay\Paxum\Message\CompletePurchaseResponse', get_class($response));
+        $this->assertInstanceOf(\Omnipay\Paxum\Message\CompletePurchaseResponse::class, $response);
     }
 }

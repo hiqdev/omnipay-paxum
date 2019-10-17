@@ -20,8 +20,17 @@ use Omnipay\Common\Message\RequestInterface;
 class CompletePurchaseResponse extends AbstractResponse
 {
     /**
+     * @return AbstractRequest|RequestInterface
+     */
+    public function getRequest()
+    {
+        return parent::getRequest();
+    }
+
+    /**
      * @param RequestInterface $request
      * @param array $data
+     * @throws InvalidResponseException when the request validation fails
      */
     public function __construct(RequestInterface $request, $data)
     {

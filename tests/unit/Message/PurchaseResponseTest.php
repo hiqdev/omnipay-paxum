@@ -55,7 +55,7 @@ class PurchaseResponseTest extends TestCase
         $this->assertNull($response->getCode());
         $this->assertNull($response->getMessage());
         $this->assertSame('POST', $response->getRedirectMethod());
-        $this->assertStringStartsWith('https://paxum.com/payment', $response->getRedirectUrl());
+        $this->assertStringStartsWith('https://www.paxum.com/payment', $response->getRedirectUrl());
         $this->assertSame([
             'business_email' => $this->purse,
             'amount'         => $this->amount,
