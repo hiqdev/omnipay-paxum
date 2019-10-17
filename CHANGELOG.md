@@ -7,6 +7,8 @@
 
 ## [Development started] - 2015-10-23
 
+## [3.0.0] - 2019-10-17
+
 [@hiqsol]: https://github.com/hiqsol
 [sol@hiqdev.com]: https://github.com/hiqsol
 [@SilverFire]: https://github.com/SilverFire
@@ -17,3 +19,4 @@
 [bladeroot@gmail.com]: https://github.com/BladeRoot
 [3.0.0]: https://github.com/hiqdev/omnipay-paxum/releases/tag/3.0.0
 [Under development]: https://github.com/hiqdev/omnipay-paxum/releases
+[Development started]: https://github.com/hiqdev/omnipay-paxum/compare/3.0.0...Development started
