@@ -10,6 +10,8 @@
 
 namespace Omnipay\Paxum\Message;
 
+use DateTime;
+use DateTimeZone;
 use Omnipay\Common\Exception\InvalidResponseException;
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RequestInterface;
@@ -88,7 +90,7 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getAmount()
     {
-        return $this->data['transaction_amount'];
+        return str_replace(',', '', $this->data['transaction_amount']);
     }
 
     /**
@@ -98,8 +100,8 @@ class CompletePurchaseResponse extends AbstractResponse
      */
     public function getTime()
     {
-        $time = new \DateTime($this->data['transaction_date'], new \DateTimeZone('EST'));
-        $time->setTimezone(new \DateTimeZone('UTC'));
+        $time = new DateTime($this->data['transaction_date'], new DateTimeZone('EST'));
+        $time->setTimezone(new DateTimeZone('UTC'));
 
         return $time->format('c');
     }
