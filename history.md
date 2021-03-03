@@ -1,8 +1,14 @@
-## [3.0.0] - 2019-10-17
-
 ## [Under development]
 
+## [3.0.1] - 2021-03-03
+
+- Fix parsing Amount with thousands separator
     - [2649a08] 2019-10-17 Update to Omnipay v3 [@SilverFire]
+    - [8bd4f12] 2021-03-03 Add a test case for amount with thousands separator [@SilverFire]
+    - [d61a37f] 2021-03-03 Paxum passes Amout with thousands separator [@SilverFire]
+
+## [3.0.0] - 2019-10-17
+
 - Update to Omnipay v3
     - [e1a2d2a] 2019-10-17 Update to Omnipay v3 [@SilverFire]
 - Other minor fixes and enhancements
@@ -39,8 +45,6 @@
     - [664816e] 2015-10-23 inited [@hiqsol]
 
 ## [Development started] - 2015-10-23
-
-## [3.0.0] - 2019-10-17
 
 [@hiqsol]: https://github.com/hiqsol
 [sol@hiqdev.com]: https://github.com/hiqsol
@@ -83,6 +87,9 @@
 [516aecb]: https://github.com/hiqdev/omnipay-paxum/commit/516aecb
 [664816e]: https://github.com/hiqdev/omnipay-paxum/commit/664816e
 [3.0.0]: https://github.com/hiqdev/omnipay-paxum/releases/tag/3.0.0
-[Under development]: https://github.com/hiqdev/omnipay-paxum/releases
+[Under development]: https://github.com/hiqdev/omnipay-paxum/compare/3.0.0...HEAD
 [2649a08]: https://github.com/hiqdev/omnipay-paxum/commit/2649a08
 [Development started]: https://github.com/hiqdev/omnipay-paxum/compare/3.0.0...Development started
+[8bd4f12]: https://github.com/hiqdev/omnipay-paxum/commit/8bd4f12
+[d61a37f]: https://github.com/hiqdev/omnipay-paxum/commit/d61a37f
+[3.0.1]: https://github.com/hiqdev/omnipay-paxum/releases/tag/3.0.1
