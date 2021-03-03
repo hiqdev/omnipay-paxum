@@ -23,7 +23,7 @@ class CompletePurchaseRequestTest extends TestCase
     private $description            = 'Test Transaction long description';
     private $transactionId          = '12345ASD67890sd';
     private $transactionReference   = '12345678';
-    private $amount                 = '1465.01';
+    private $amount                 = '1,465.01';
     private $status                 = 'done';
     private $currency               = 'USD';
     private $testMode               = false;

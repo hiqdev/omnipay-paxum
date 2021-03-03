@@ -24,7 +24,7 @@ class CompletePurchaseResponseTest extends TestCase
     private $transactionId          = '1SD672345A890sd';
     private $transactionReference   = 'sdfa1SD672345A8';
     private $status                 = 'done';
-    private $amount                 = '0.01';
+    private $amount                 = '2,310.01';
     private $payer                  = '//';
     private $time                   = '2015-12-12 12:12:12';
     private $currency               = 'USD';
@@ -96,7 +96,7 @@ class CompletePurchaseResponseTest extends TestCase
         $this->assertNull($response->getCode());
         $this->assertSame($this->transactionId,         $response->getTransactionId());
         $this->assertSame($this->transactionReference,  $response->getTransactionReference());
-        $this->assertSame($this->amount,                $response->getAmount());
+        $this->assertSame('2310.01',                    $response->getAmount());
         $this->assertSame($this->payer,                 $response->getPayer());
         $this->assertSame($this->hash,                  $response->getHash());
         $this->assertSame($this->currency,              $response->getCurrency());
