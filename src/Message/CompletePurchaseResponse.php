@@ -81,7 +81,7 @@ class CompletePurchaseResponse extends AbstractResponse
 
     public function getTransactionStatus()
     {
-        return $this->data['transaction_status'];
+        return isset($this->data['transaction_status']) ? $this->data['transaction_status'] : null;
     }
 
     /**
