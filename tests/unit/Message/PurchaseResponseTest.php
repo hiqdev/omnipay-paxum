@@ -27,7 +27,7 @@ class PurchaseResponseTest extends TestCase
     private $currency       = 'USD';
     private $testMode       = true;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

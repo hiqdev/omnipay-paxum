@@ -28,7 +28,7 @@ class CompletePurchaseRequestTest extends TestCase
     private $currency               = 'USD';
     private $testMode               = false;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
